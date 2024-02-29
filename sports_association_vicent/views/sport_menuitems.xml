@@ -24,6 +24,13 @@
         name="Sport Issue Tags"
         action="sports_association_vicent.sport_issue_tag_action"
         parent="sports_association_vicent.sport_menu"
+        sequence="30"/>
+    
+    <menuitem
+        id="sport_sport_menu"
+        name="Sports"
+        action="sports_association_vicent.sport_sport_action"
+        parent="sports_association_vicent.sport_menu"
         sequence="40"/>
 
 </odoo>

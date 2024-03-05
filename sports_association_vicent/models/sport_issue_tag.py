@@ -9,4 +9,6 @@ class SportIssueTag(models.Model):
     _description = "Sport Issue Tag"
 
     name = fields.Char(string='Name', required=True)
+    color = fields.Integer(string ='color', default=0)
+
     

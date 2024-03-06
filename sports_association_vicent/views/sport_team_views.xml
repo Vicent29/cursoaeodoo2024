@@ -30,6 +30,7 @@
                     </div>
                     <group>
                         <field name="sport_id" />
+                        <field name="count_players" />
                     </group>
                     <notebook>
                         <page name="players" string="Players">

@@ -24,11 +24,13 @@
                     <group>
                         <group>
                             <field name="name" />
+                            <field name="birth_date" />
                             <field name="age" />
                             <field name="position" />
                         </group>
                         <group>
                             <field name="team_id" />
+                            <field name="sport_name" />
                             <field name="starter" widget="boolean_toggle" />
                         </group>
                         

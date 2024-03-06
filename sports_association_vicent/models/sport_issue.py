@@ -23,10 +23,10 @@ class SportIssue(models.Model):
     sequence = fields.Integer(string='Sequence', default=10)
     solution = fields.Html('Solution')
     color = fields.Integer(string ='color', default=0)
+    assigned = fields.Boolean(string='Assigned',compute="_compute_assigned",inverse="_inverse_assigned", search="_search_assigned")
     
     clinic_id = fields.Many2one('sport.clinic', string='Clinic')
-    tag_id = fields.Many2many('sport.issue.tag', string='Tags')
-    
+    tag_ids = fields.Many2many('sport.issue.tag', string='Tags')
     cost = fields.Float(string='cost')
     
 
@@ -48,4 +48,30 @@ class SportIssue(models.Model):
     def action_open_all_issues(self):
         issues = self.env['sport.issue'].search([]) #Guardara todas las incidencias
         issues.action_open() #Llamrara al metodo de action_open
-        
+    
+    def _compute_assigned(self):
+        for record in self:
+            record.assigned = bool(record.user_id)
+
+    def _inverse_assigned(self):
+        for record in self:
+            if not record.user_id:
+                record.assigned = False
+            else:    
+                record.assigned = True
+    
+    def _search_assigned(self, operator, value):
+        for record in self:
+            if operator == "=":
+                return[('user_id', operator, value)]
+            else:    
+                return[]
+    
+    def action_add_tags(self):
+        for record in self:
+            tag_ids = self.env['sport.issue.tag'].search([('name', 'like', record.name)])
+            if tag_ids:
+                record.tag_ids = [(6, 0, tag_ids.ids)]
+            else:
+                new_tag_issue = self.env['sport.issue.tag'].create({'name': record.name})
+                record.tag_ids = [(6, 0, new_tag_issue.id.ids)]

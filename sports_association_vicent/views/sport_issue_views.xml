@@ -6,6 +6,7 @@
         <field name="model">sport.issue</field>
         <field name="arch" type="xml">
             <tree multi_edit="1" string="Issues">
+                <field name="name" />
                 <field name="sequence" widget="handle"/>
                 <field name="date" optional="show"/>
                 <field name="user_id" optional="hide"/>
@@ -23,8 +24,9 @@
                 <header>
                     <field name="state" options="{'clickable':1}" widget="statusbar" statusbar_visible="draft,open,done"/>
                     <button string="To open" invisible="state not in ('draft')" name="action_open" type="object" class="btn-primary"></button>
-                    <button string="To draft" invisible="state in ('draft')" name="action_draft" type="object" class="btn-secondary"></button>
-                    <button string="Done" invisible="state not in ('done')" name="action_done" type="object" class="btn-success"></button>
+                    <button string="To draft" invisible="state in ('draft','open')" name="action_draft" type="object" class="btn-secondary"></button>
+                    <button string="Done" invisible="state in ('done', 'draft')" name="action_done" type="object" class="btn-success"></button>
+                    <button string="Add Tags" name="action_add_tags" type="object" class="btn-primary"></button>
                 </header>
                 <sheet>
                     <div classç="oe_title">
@@ -39,7 +41,9 @@
                             <field name="cost" string="Cost"/>
                         </group>
                         <group>
+                            <field name="assigned" />
                             <field name="date"/>
+                            <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}" />
                             <field name="assistance" widget="boolean_toggle"/>
                         </group>
                     </group>
@@ -65,7 +69,7 @@
                 <field name="name" filter_domain="['|',('name', 'like', 'self'), ('description', 'like', self)]"/>
                 <field name="user_id" />
                 <field name="clinic_id" />
-                <field name="tag_id" />
+                <field name="tag_ids" />
                 <filter name="draft" string="Draft" domain="[('state', '=', 'draft')]"/>
                 <filter name="open" string="Open" domain="[('state', '=', 'open')]"/>
                 <filter name="user" string="User" context="{'group_by': 'user_id'}" />
@@ -84,7 +88,7 @@
                 <field name="date" />
                 <field name="user_id" />
                 <field name="clinic_id" />
-                <field name="tag_id" />
+                <field name="tag_ids" />
                 <field name="color" />
                 <templates>
                     <t t-name="kanban-menu">
@@ -102,7 +106,7 @@
                                    <field name="date" />
                                 </div>
                                 <div>
-                                    <field name="tag_id" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                                    <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
                                 </div>
                             </div>
                             <div class="oe_kanban_footer">

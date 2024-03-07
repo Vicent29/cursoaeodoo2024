@@ -29,6 +29,8 @@ class SportIssue(models.Model):
     tag_ids = fields.Many2many('sport.issue.tag', string='Tags')
     cost = fields.Float(string='cost')
     
+    action_ids = fields.One2many('sport.issue.action', 'issue_id', string='Actions to do')
+    
 
     def action_open(self):
         # import pdb:pdb.set_trace() --> para hacer como un debug o punto de interrupción
@@ -69,6 +71,7 @@ class SportIssue(models.Model):
     
     def action_add_tags(self):
         for record in self:
+            # import pdb; pdb.set_trace()
             tag_ids = self.env['sport.issue.tag'].search([('name', 'like', record.name)])
             if tag_ids:
                 record.tag_ids = [(6, 0, tag_ids.ids)]

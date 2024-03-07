@@ -9,6 +9,7 @@
                 <field name="name" />
                 <field name="phone"/>
                 <field name="email" />
+                <field name="available" widget="boolean_toggle"/>
             </tree>
         </field>
     </record>
@@ -23,10 +24,15 @@
                 </header>
                 <sheet>
                     <group>
-                        <field name="name" />
-                        <field name="phone"/>
-                        <field name="email" />
-                        <field name="issue_ids" />
+                        <group>
+                            <field name="name" />
+                            <field name="email" />
+                            <field name="issue_ids" widget="many2many_tags"/>
+                        </group>
+                        <group>
+                            <field name="phone"/>
+                            <field name="available" />
+                        </group>
                     </group>
                     <notebook>
                         <page name="issues" string="Issues">

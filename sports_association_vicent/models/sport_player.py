@@ -14,7 +14,7 @@ class SportPlayer(models.Model):
     birth_date = fields.Date(string='Birthdate')
     position = fields.Char(string='Position')
     starter = fields.Boolean(string='Starter')
-    sport_name = fields.Char(string="Sport",related='team_id.sport_id.name')
+    sport_name = fields.Char(string="Sport",related='team_id.sport_id.name', store=True)
     
     def action_make_starter(self):
         self.starter = True

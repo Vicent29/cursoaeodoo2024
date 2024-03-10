@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-29 08:40+0000\n"
-"PO-Revision-Date: 2024-02-29 08:40+0000\n"
+"POT-Creation-Date: 2024-03-10 21:53+0000\n"
+"PO-Revision-Date: 2024-03-10 21:53+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -24,7 +24,7 @@ msgid ""
 msgstr ""
 
 #. module: sports_association_vicent
-#: model:res.groups,comment:sports_association_vicent.res_groups_associatioon_manager
+#: model:res.groups,comment:sports_association_vicent.res_groups_association_manager
 msgid ""
 "\n"
 "        The user will be able to manage some model.\n"
@@ -32,9 +32,41 @@ msgid ""
 msgstr ""
 
 #. module: sports_association_vicent
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue__action_ids
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_issue_view_form
+msgid "Actions to do"
+msgstr "Acciones a realizar"
+
+#. module: sports_association_vicent
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_issue_view_form
+msgid "Add Tags"
+msgstr "Añadir Etiquetas"
+
+#. module: sports_association_vicent
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_player__age
+msgid "Age"
+msgstr "Edad"
+
+#. module: sports_association_vicent
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue__assigned
+msgid "Assigned"
+msgstr "Asignado"
+
+#. module: sports_association_vicent
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue__assistance
 msgid "Assistante"
 msgstr "Asistencia"
+
+#. module: sports_association_vicent
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_clinic__available
+msgid "Available"
+msgstr "Disponible"
+
+#. module: sports_association_vicent
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_player__birth_date
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_player_view_search
+msgid "Birthdate"
+msgstr "Fecha de nacimiento"
 
 #. module: sports_association_vicent
 #: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_clinic_view_form
@@ -53,14 +85,49 @@ msgid "Clinics"
 msgstr "Clinicas"
 
 #. module: sports_association_vicent
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_issue_view_form
+msgid "Cost"
+msgstr "Coste"
+
+#. module: sports_association_vicent
+#: model_terms:ir.actions.act_window,help:sports_association_vicent.sport_league_action
+msgid "Create a new league"
+msgstr "Crear una nueva liga"
+
+#. module: sports_association_vicent
+#: model_terms:ir.actions.act_window,help:sports_association_vicent.sport_license_action
+msgid "Create a new license"
+msgstr "Crear una nueva licencia"
+
+#. module: sports_association_vicent
+#: model_terms:ir.actions.act_window,help:sports_association_vicent.sport_match_action
+msgid "Create a new match"
+msgstr "Crear un nuevo partido"
+
+#. module: sports_association_vicent
 #: model_terms:ir.actions.act_window,help:sports_association_vicent.action_sport_issue
 msgid "Create a new product"
 msgstr "Crear nuevo producto"
 
 #. module: sports_association_vicent
+#: model_terms:ir.actions.act_window,help:sports_association_vicent.sport_sport_action
+msgid "Create a new sport"
+msgstr "Crear un deporte"
+
+#. module: sports_association_vicent
 #: model_terms:ir.actions.act_window,help:sports_association_vicent.action_sport_clinic
 msgid "Create a new sport issue"
 msgstr "Crear una nueva icidencia deportiva"
+
+#. module: sports_association_vicent
+#: model_terms:ir.actions.act_window,help:sports_association_vicent.sport_player_action
+msgid "Create a new sport player"
+msgstr "Crear un nuevo jugador"
+
+#. module: sports_association_vicent
+#: model_terms:ir.actions.act_window,help:sports_association_vicent.sport_team_action
+msgid "Create a new sport team"
+msgstr "Crear un nuevo equipo"
 
 #. module: sports_association_vicent
 #: model_terms:ir.actions.act_window,help:sports_association_vicent.sport_issue_tag_action
@@ -70,26 +137,50 @@ msgstr "Crear un nuevo tag"
 #. module: sports_association_vicent
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_clinic__create_uid
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue__create_uid
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue_action__create_uid
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue_tag__create_uid
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_league__create_uid
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_league_line__create_uid
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_license__create_uid
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_match__create_uid
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_match_line__create_uid
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_player__create_uid
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_sport__create_uid
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_team__create_uid
 msgid "Created by"
 msgstr ""
 
 #. module: sports_association_vicent
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_clinic__create_date
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue__create_date
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue_action__create_date
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue_tag__create_date
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_league__create_date
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_league_line__create_date
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_license__create_date
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_match__create_date
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_match_line__create_date
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_player__create_date
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_sport__create_date
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_team__create_date
 msgid "Created on"
 msgstr ""
 
 #. module: sports_association_vicent
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue__date
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_match__date
 msgid "Date"
 msgstr "Fecha"
 
 #. module: sports_association_vicent
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_issue_view_kanban
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_team_view_kanban
+msgid "Delete"
+msgstr "Borrar"
+
+#. module: sports_association_vicent
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue__description
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_sport__description
 #: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_issue_view_form
 msgid "Description"
 msgstr "Descripción"
@@ -97,21 +188,38 @@ msgstr "Descripción"
 #. module: sports_association_vicent
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_clinic__display_name
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue__display_name
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue_action__display_name
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue_tag__display_name
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_league__display_name
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_league_line__display_name
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_license__display_name
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_match__display_name
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_match_line__display_name
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_player__display_name
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_sport__display_name
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_team__display_name
 msgid "Display Name"
 msgstr "Nombre"
 
 #. module: sports_association_vicent
 #: model:ir.model.fields.selection,name:sports_association_vicent.selection__sport_issue__state__done
+#: model:ir.model.fields.selection,name:sports_association_vicent.selection__sport_issue_action__state__done
 #: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_issue_view_form
 msgid "Done"
 msgstr "Hecho"
 
 #. module: sports_association_vicent
 #: model:ir.model.fields.selection,name:sports_association_vicent.selection__sport_issue__state__draft
+#: model:ir.model.fields.selection,name:sports_association_vicent.selection__sport_issue_action__state__draft
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_issue_view_search
 msgid "Draft"
 msgstr "Borrador"
+
+#. module: sports_association_vicent
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_issue_view_kanban
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_team_view_kanban
+msgid "Edit"
+msgstr "Editar"
 
 #. module: sports_association_vicent
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_clinic__email
@@ -119,6 +227,7 @@ msgid "Email"
 msgstr "Email"
 
 #. module: sports_association_vicent
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_league__end_date
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_license__end_date
 msgid "End Date"
 msgstr "Fecha fin"
@@ -126,13 +235,37 @@ msgstr "Fecha fin"
 #. module: sports_association_vicent
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_clinic__id
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue__id
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue_action__id
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue_tag__id
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_league__id
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_league_line__id
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_license__id
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_match__id
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_match_line__id
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_player__id
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_sport__id
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_team__id
 msgid "ID"
 msgstr ""
 
 #. module: sports_association_vicent
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_issue_view_search
+msgid "Incidencias"
+msgstr "Incidencias"
+
+#. module: sports_association_vicent
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue_action__issue_id
+msgid "Issue"
+msgstr "Incidencia"
+
+#. module: sports_association_vicent
+#: model:ir.ui.menu,name:sports_association_vicent.sport_issue_management_menu
+msgid "Issue Management"
+msgstr "Gestion de incidencias"
+
+#. module: sports_association_vicent
 #: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_issue_view_form
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_team_view_form
 msgid "Issue Name"
 msgstr "Nombre"
 
@@ -140,6 +273,7 @@ msgstr "Nombre"
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_clinic__issue_ids
 #: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_clinic_view_form
 #: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_issue_view_form
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_issue_view_pivot
 #: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_issue_view_tree
 msgid "Issues"
 msgstr "Incidencias"
@@ -147,36 +281,130 @@ msgstr "Incidencias"
 #. module: sports_association_vicent
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_clinic__write_uid
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue__write_uid
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue_action__write_uid
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue_tag__write_uid
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_league__write_uid
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_league_line__write_uid
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_license__write_uid
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_match__write_uid
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_match_line__write_uid
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_player__write_uid
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_sport__write_uid
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_team__write_uid
 msgid "Last Updated by"
 msgstr ""
 
 #. module: sports_association_vicent
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_clinic__write_date
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue__write_date
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue_action__write_date
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue_tag__write_date
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_league__write_date
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_league_line__write_date
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_license__write_date
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_match__write_date
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_match_line__write_date
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_player__write_date
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_sport__write_date
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_team__write_date
 msgid "Last Updated on"
 msgstr ""
 
 #. module: sports_association_vicent
-#: model:res.groups,name:sports_association_vicent.res_groups_associatioon_manager
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_league_line__league_id
+msgid "League"
+msgstr "Liga"
+
+#. module: sports_association_vicent
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_league__sport_league_ids
+msgid "League Lines"
+msgstr ""
+
+#. module: sports_association_vicent
+#: model:ir.actions.act_window,name:sports_association_vicent.sport_league_action
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_league_view_form
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_league_view_tree
+msgid "Leagues"
+msgstr "Ligas"
+
+#. module: sports_association_vicent
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_license_view_tree
+msgid "License"
+msgstr "Licencia"
+
+#. module: sports_association_vicent
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_team__player_ids
+msgid "List Players"
+msgstr "Lista Jugadores"
+
+#. module: sports_association_vicent
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_team__logo
+msgid "Logo"
+msgstr "Logo"
+
+#. module: sports_association_vicent
+#: model:res.groups,name:sports_association_vicent.res_groups_association_manager
 msgid "Manager"
 msgstr ""
 
 #. module: sports_association_vicent
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_team_view_form
+msgid "Mark players starters"
+msgstr "Marcar jugadores como tiutulares"
+
+#. module: sports_association_vicent
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_team_view_form
+msgid "Mark players substitutes"
+msgstr "Marcar jugadores como "
+
+#. module: sports_association_vicent
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_match_line__match_id
+msgid "Match"
+msgstr "Marcar jugadores suplentes"
+
+#. module: sports_association_vicent
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_match__match_line_ids
+msgid "Match Lines"
+msgstr ""
+
+#. module: sports_association_vicent
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_match_view_calendar
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_match_view_form
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_match_view_graph
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_match_view_pivot
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_match_view_tree
+msgid "Matches"
+msgstr "Partidos"
+
+#. module: sports_association_vicent
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_clinic__name
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue__name
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue_action__name
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue_tag__name
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_league__name
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_license__name
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_player__name
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_sport__name
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_team__name
 msgid "Name"
 msgstr "Nombre"
 
 #. module: sports_association_vicent
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_player_view_search
+msgid "Non Starter"
+msgstr "Suplentes"
+
+#. module: sports_association_vicent
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_team_view_kanban
+msgid "Nº players:"
+msgstr "Nº jugadores"
+
+#. module: sports_association_vicent
 #: model:ir.model.fields.selection,name:sports_association_vicent.selection__sport_issue__state__open
+#: model:ir.model.fields.selection,name:sports_association_vicent.selection__sport_issue_action__state__open
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_issue_view_search
 msgid "Open"
-msgstr ""
+msgstr "Abierto"
 
 #. module: sports_association_vicent
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_license__partner_id
@@ -189,9 +417,47 @@ msgid "Phone"
 msgstr "Teléfono"
 
 #. module: sports_association_vicent
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_player_view_form
+msgid "Player"
+msgstr "Jugador"
+
+#. module: sports_association_vicent
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_team__count_players
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_player_view_search
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_player_view_tree
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_team_view_form
+msgid "Players"
+msgstr "Jugadores"
+
+#. module: sports_association_vicent
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_league_line__points
+msgid "Points"
+msgstr "Puntos"
+
+#. module: sports_association_vicent
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_player__position
+msgid "Position"
+msgstr "Posición"
+
+#. module: sports_association_vicent
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_match_line__score
+msgid "Score"
+msgstr "Resultado"
+
+#. module: sports_association_vicent
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_match__score_winning
+msgid "Score Winning"
+msgstr "Resultado Ganador"
+
+#. module: sports_association_vicent
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue__sequence
 msgid "Sequence"
 msgstr "Secuencia"
+
+#. module: sports_association_vicent
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_league_view_form
+msgid "Set Score"
+msgstr "Actualizar Ranking"
 
 #. module: sports_association_vicent
 #: model:ir.model.fields,help:sports_association_vicent.field_sport_issue__assistance
@@ -207,6 +473,18 @@ msgstr "Solución"
 #: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_issue_view_form
 msgid "Solutions"
 msgstr "Soluciones"
+
+#. module: sports_association_vicent
+#: model:ir.actions.act_window,name:sports_association_vicent.sport_sport_action
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_league__sport_id
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_match__sport_id
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_player__sport_name
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_team__sport_id
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_player_view_search
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_sport_view_form
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_sport_view_tree
+msgid "Sport"
+msgstr "Deporte"
 
 #. module: sports_association_vicent
 #: model:ir.ui.menu,name:sports_association_vicent.sport_menu
@@ -230,6 +508,11 @@ msgid "Sport Issue"
 msgstr "Incidencia"
 
 #. module: sports_association_vicent
+#: model:ir.model,name:sports_association_vicent.model_sport_issue_action
+msgid "Sport Issue Action"
+msgstr ""
+
+#. module: sports_association_vicent
 #: model:ir.model,name:sports_association_vicent.model_sport_issue_tag
 msgid "Sport Issue Tag"
 msgstr "Etiqueta"
@@ -246,13 +529,74 @@ msgstr "Etiquetas"
 
 #. module: sports_association_vicent
 #: model:ir.ui.menu,name:sports_association_vicent.sport_issue_menu
-msgid "Sport Isuues"
+msgid "Sport Issues"
 msgstr "Incidencias"
 
 #. module: sports_association_vicent
+#: model:ir.model,name:sports_association_vicent.model_sport_league
+#: model:ir.ui.menu,name:sports_association_vicent.sport_league_menu
+msgid "Sport League"
+msgstr "Lista Ligas"
+
+#. module: sports_association_vicent
+#: model:ir.model,name:sports_association_vicent.model_sport_league_line
+msgid "Sport League Line"
+msgstr ""
+
+#. module: sports_association_vicent
+#: model:ir.actions.act_window,name:sports_association_vicent.sport_license_action
 #: model:ir.model,name:sports_association_vicent.model_sport_license
 msgid "Sport License"
 msgstr "Liciencia"
+
+#. module: sports_association_vicent
+#: model:ir.ui.menu,name:sports_association_vicent.sport_license_menu
+msgid "Sport Licenses"
+msgstr "Lista Licencias"
+
+#. module: sports_association_vicent
+#: model:ir.ui.menu,name:sports_association_vicent.sport_sport_management_menu
+msgid "Sport Management"
+msgstr "Gestion de Deportes"
+
+#. module: sports_association_vicent
+#: model:ir.model,name:sports_association_vicent.model_sport_match
+#: model:ir.ui.menu,name:sports_association_vicent.sport_match_menu
+msgid "Sport Match"
+msgstr "Lista Partidos"
+
+#. module: sports_association_vicent
+#: model:ir.model,name:sports_association_vicent.model_sport_match_line
+msgid "Sport Match Line"
+msgstr ""
+
+#. module: sports_association_vicent
+#: model:ir.actions.act_window,name:sports_association_vicent.sport_match_action
+msgid "Sport Matches"
+msgstr "Lista Partidos"
+
+#. module: sports_association_vicent
+#: model:ir.actions.act_window,name:sports_association_vicent.sport_player_action
+#: model:ir.model,name:sports_association_vicent.model_sport_player
+msgid "Sport Player"
+msgstr ""
+
+#. module: sports_association_vicent
+#: model:ir.ui.menu,name:sports_association_vicent.sport_player_menu
+msgid "Sport Players"
+msgstr "Lista Jugadores"
+
+#. module: sports_association_vicent
+#: model:ir.model,name:sports_association_vicent.model_sport_sport
+msgid "Sport Sport"
+msgstr ""
+
+#. module: sports_association_vicent
+#: model:ir.actions.act_window,name:sports_association_vicent.sport_team_action
+#: model:ir.model,name:sports_association_vicent.model_sport_team
+#: model:ir.ui.menu,name:sports_association_vicent.sport_team_menu
+msgid "Sport Team"
+msgstr "Lista Equipos"
 
 #. module: sports_association_vicent
 #: model:ir.actions.act_window,name:sports_association_vicent.action_sport_issue
@@ -265,20 +609,49 @@ msgid "Sports Association"
 msgstr "Asociación de deporte"
 
 #. module: sports_association_vicent
+#: model:ir.ui.menu,name:sports_association_vicent.sport_sport_menu
+msgid "Sports List"
+msgstr "Lista Deportes"
+
+#. module: sports_association_vicent
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_league__start_date
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_license__start_date
 msgid "Start Date"
 msgstr "Fecha inicio"
 
 #. module: sports_association_vicent
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_player__starter
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_player_view_search
+msgid "Starter"
+msgstr "Titular"
+
+#. module: sports_association_vicent
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue__state
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue_action__state
 msgid "State"
 msgstr "Estado"
 
 #. module: sports_association_vicent
-#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue__tag_id
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue__tag_ids
 #: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_issue_tags_view_tree
 msgid "Tags"
 msgstr "Etiquetas"
+
+#. module: sports_association_vicent
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_league_line__team_id
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_match_line__team_id
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_player__team_id
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_player_view_search
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_team_view_form
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_team_view_tree
+msgid "Team"
+msgstr "Equipo"
+
+#. module: sports_association_vicent
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_league_view_form
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_match_view_form
+msgid "Teams"
+msgstr "Equipos"
 
 #. module: sports_association_vicent
 #: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_issue_view_form
@@ -293,5 +666,23 @@ msgstr "Pasar a abierto"
 #. module: sports_association_vicent
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue__user_id
 #: model:res.groups,name:sports_association_vicent.res_groups_sports_association_user
+#: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_issue_view_search
 msgid "User"
 msgstr "Usuario"
+
+#. module: sports_association_vicent
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_match__winner_team_id
+msgid "Winner Team"
+msgstr "Ganador Equipo"
+
+#. module: sports_association_vicent
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue__color
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue_tag__color
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_team__color
+msgid "color"
+msgstr ""
+
+#. module: sports_association_vicent
+#: model:ir.model.fields,field_description:sports_association_vicent.field_sport_issue__cost
+msgid "cost"
+msgstr ""

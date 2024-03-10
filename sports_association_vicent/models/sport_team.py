@@ -12,6 +12,8 @@ class SportTeam(models.Model):
     sport_id = fields.Many2one('sport.sport', string='Sport')
     player_ids = fields.One2many('sport.player', 'team_id', string='List Players')
     count_players = fields.Integer(string='Players',compute="_compute_count_players")
+    color = fields.Integer(string ='color', default=0)
+
     logo = fields.Image(string='Logo')
     
     def action_make_all_starters(self):

@@ -65,6 +65,18 @@
             action="sports_association_vicent.sport_team_action"
             parent="sports_association_vicent.sport_sport_management_menu"
             sequence="70"/>
+    
+    <menuitem
+            id="sport_league_menu"
+            name="Sport League"
+            action="sport_league_action"
+            parent="sports_association_vicent.sport_sport_management_menu"
+            sequence="80"/>
         
-
+    <menuitem
+            id="sport_match_menu"
+            name="Sport Match"
+            action="sport_match_action"
+            parent="sports_association_vicent.sport_sport_management_menu"
+            sequence="90"/>
 </odoo>

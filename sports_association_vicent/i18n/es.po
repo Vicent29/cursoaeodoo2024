@@ -355,7 +355,7 @@ msgstr "Marcar jugadores como tiutulares"
 #. module: sports_association_vicent
 #: model_terms:ir.ui.view,arch_db:sports_association_vicent.sport_team_view_form
 msgid "Mark players substitutes"
-msgstr "Marcar jugadores como "
+msgstr "Marcar jugadores como suplentes"
 
 #. module: sports_association_vicent
 #: model:ir.model.fields,field_description:sports_association_vicent.field_sport_match_line__match_id

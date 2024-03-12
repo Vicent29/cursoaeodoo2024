@@ -1,8 +1,9 @@
 # Copyright 2024 Vicent Esteve - vesteve@ontinet.com
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
-from odoo import fields, models
-
+from odoo import fields, models, api
+from odoo.exceptions import ValidationError
+from odoo.tools.translate import _
 
 class SportIssue(models.Model):
     _name = 'sport.issue'
@@ -10,7 +11,7 @@ class SportIssue(models.Model):
 
     name = fields.Char(string='Name', required=True)
     description = fields.Text(string='Description')
-    date = fields.Date(string='Date')
+    date = fields.Date(string='Date', default=fields.Date.today)
     assistance = fields.Boolean(string='Assistante', help='Show if the isuue has asssitence')
     state = fields.Selection([
         ('draft', 'Draft'),
@@ -19,7 +20,7 @@ class SportIssue(models.Model):
         string='State',
         default='draft',
     )
-    user_id = fields.Many2one('res.users', string='User')
+    user_id = fields.Many2one('res.users', string='User', default=lambda self: self.env.user)
     sequence = fields.Integer(string='Sequence', default=10)
     solution = fields.Html('Solution')
     color = fields.Integer(string ='color', default=0)
@@ -31,6 +32,29 @@ class SportIssue(models.Model):
     
     action_ids = fields.One2many('sport.issue.action', 'issue_id', string='Actions to do')
     
+    _sql_constraints = [
+        ('unique_name', 'UNIQUE(name)', 'The name of the issue must be unique.'),
+    ]
+    
+    @api.constrains('name')
+    def _check_unique_name(self):
+        for record in self:
+            if record.name:
+                existing_issue = self.search([('name', '=', record.name), ('id', '!=', record.id)])
+                if existing_issue:
+                    raise ValidationError("The name of the issue must be unique.")
+    
+    @api.constrains('cost')
+    def _check_cost(self):
+        for record in self:
+            if record.cost < 0:
+                raise ValidationError(_("The cost cannot be negative."))
+    
+    @api.onchange('clinic_id')
+    def _onchange_clinic(self):
+        for record in self:
+            if record.clinic_id:
+                record.assistance = True
 
     def action_open(self):
         # import pdb:pdb.set_trace() --> para hacer como un debug o punto de interrupción
@@ -78,3 +102,10 @@ class SportIssue(models.Model):
             else:
                 new_tag_issue = self.env['sport.issue.tag'].create({'name': record.name})
                 record.tag_ids = [(6, 0, new_tag_issue.id.ids)]
+                
+    def _cron_delete_unused_tags(self):
+        tag_ids = self.env['sport.issue.tag'].search([])
+        for tag in tag_ids:
+            issue = self.env['sport.issue'].search([('tag_ids', 'in', tag.id)])
+            if not issue:
+                tag.unlink()

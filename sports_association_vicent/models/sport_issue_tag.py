@@ -10,5 +10,3 @@ class SportIssueTag(models.Model):
 
     name = fields.Char(string='Name', required=True)
     color = fields.Integer(string ='color', default=0)
-
-    

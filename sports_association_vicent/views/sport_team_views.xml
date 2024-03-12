@@ -23,6 +23,11 @@
                     <button string="Mark players substitutes" name="action_make_all_substitutes" type="object" class="btn-danger"/>
                 </header>
                 <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button type="object" name="action_view_players" class="oe_stat_button" icon="fa-users">
+                            <field name="count_players" string="Players" widget="statinfo" options="{'inline': True}"/>
+                        </button>
+                    </div>
                     <field name="logo" widget="image" class="oe_avatar" />
                     <div class="oe_title">
                         <h1>

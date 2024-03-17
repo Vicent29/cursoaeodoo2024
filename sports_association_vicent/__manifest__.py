@@ -16,6 +16,8 @@
         "data/ir_cron.xml",
         "security/groups.xml",
         "security/ir.model.access.csv",
+        "wizards/sport_create_issue.xml",
+        "wizards/sport_state_issue.xml",
         "views/sport_issue_views.xml",
         "views/sport_issue_tag_views.xml",
         "views/sport_clinic_views.xml",

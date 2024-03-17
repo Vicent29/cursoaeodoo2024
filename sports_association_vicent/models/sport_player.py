@@ -11,10 +11,11 @@ class SportPlayer(models.Model):
     name = fields.Char(string='Name', required=True)
     team_id = fields.Many2one('sport.team', string='Team')
     age = fields.Integer(string='Age',compute='_compute_age', store=True)
-    birth_date = fields.Date(string='Birthdate')
-    position = fields.Char(string='Position')
-    starter = fields.Boolean(string='Starter', default=True)
+    birth_date = fields.Date(string='Birthdate', copy=False)
+    position = fields.Char(string='Position', copy=False)
+    starter = fields.Boolean(string='Starter', default=True, copy=False)
     sport_name = fields.Char(string="Sport",related='team_id.sport_id.name', store=True)
+    active = fields.Boolean(string='Active', default=True)
     
     def action_make_starter(self):
         self.starter = True
@@ -28,5 +29,3 @@ class SportPlayer(models.Model):
             if record.birth_date:
                 today = date.today()
                 record.age = today.year - record.birth_date.year - ((today.month, today.day) < (record.birth_date.month, record.birth_date.day))
-
-    # Añadir un botón en los equipos que busque los jugadores que no tengan equipo, menores de 30 años, y los añada al equipo.

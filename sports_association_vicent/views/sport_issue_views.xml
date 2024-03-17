@@ -26,7 +26,7 @@
                     <button string="To open" invisible="state not in ('draft')" name="action_open" type="object" class="btn-primary"></button>
                     <button string="To draft" invisible="state in ('draft','open')" name="action_draft" type="object" class="btn-secondary"></button>
                     <button string="Done" invisible="state in ('done', 'draft')" name="action_done" type="object" class="btn-success"></button>
-                    <button string="Add Tags" name="action_add_tags" type="object" class="btn-primary"></button>
+                    <button string="Add Tags" name="action_add_tags" groups="sports_association_vicent.res_groups_association_manager" type="object" class="btn-primary"></button>
                 </header>
                 <sheet>
                     <div classç="oe_title">

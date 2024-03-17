@@ -20,6 +20,9 @@
         <field name="model">sport.player</field>
         <field name="arch" type="xml">
             <form string="Player">
+                <header>
+                    <button string="Create issue" name="%(action_sport_create_issue)d" context="{'default_player_id': id}" type="action" class="oe_highlight"/>
+                </header>
                 <sheet>
                     <group>
                         <group>

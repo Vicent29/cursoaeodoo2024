@@ -2,7 +2,7 @@
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 from odoo import fields, models, api
-from odoo.exceptions import ValidationError
+from odoo.exceptions import ValidationError, UserError
 from odoo.tools.translate import _
 
 class SportIssue(models.Model):
@@ -27,6 +27,7 @@ class SportIssue(models.Model):
     assigned = fields.Boolean(string='Assigned',compute="_compute_assigned",inverse="_inverse_assigned", search="_search_assigned")
     
     clinic_id = fields.Many2one('sport.clinic', string='Clinic')
+    player_id = fields.Many2one('sport.player', string='Player')
     tag_ids = fields.Many2many('sport.issue.tag', string='Tags')
     cost = fields.Float(string='cost')
     
@@ -65,7 +66,9 @@ class SportIssue(models.Model):
             
     def action_draft(self):
         for record in self:
-            record.state= 'draft'
+            if not record.date:
+                raise UserError(_('The date is required'))
+        record.state= 'draft'
             
     def action_done(self):
         for record in self:
